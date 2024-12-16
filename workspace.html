@@ -1,0 +1,111 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<div style="width: 1920px; height: 1125px; position: relative; background: white">
+    <img style="width: 1920.58px; height: 1125.99px; left: 1920.5px; top: 1125.69px; position: absolute; transform: rotate(-180deg); transform-origin: 0 0"
+         src="img\image2.jpg">
+    <div style="width: 1920px; height: 1125px; left: 0px; top: 0px; position: absolute; background: #2a0441dc; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0) ">
+    </div>
+</div>
+<div style="width: 575px; left: 275px; top: 300px; position: absolute; text-shadow: 1px 1px 10px black; color: FFBE00; font-size: 20px; font-family: Roboto; font-weight: lighter; text-transform: uppercase; line-height: 18px; letter-spacing: 1.38px; word-wrap: break-word">
+    Мои проекты:
+</div>
+<div style="width: 575px; left: 1330px; top: 300px; position: absolute; text-shadow: 1px 1px 10px black; color: FFBE00; font-size: 20px; font-family: Roboto; font-weight: lighter; text-transform: uppercase; line-height: 18px; letter-spacing: 1.38px; word-wrap: break-word">
+    Создать новый дизайн
+</div>
+<div>
+
+    <div id="brd1" class="brd"
+         style="width: 702px; height: 250px; left: 201px; top: 400px; position: absolute; background: #ffbf0000; border-radius: 0px">
+    </div>
+    <div class="brd"
+         style="width: 702px; height: 250px; left: 201px; top: 775px; position: absolute; background: #ffbf0000; border-radius: 0px">
+    </div>
+    <div class="brd"
+         style="width: 702px; height: 250px; left: 1027px; top: 399px; position: absolute; background: #ffbf0000; border-radius: 0px">
+    </div>
+    <div class="brd"
+         style="width: 702px; height: 250px; left: 1027px; top: 775px; position: absolute; background: #ffbf0000; border-radius: 0px">
+    </div>
+</div>
+
+<button class="crtme"
+        style="width: 142px; left: 22px; top: 24px; position: absolute; text-align: center; text-shadow: 1px 1px 5px black; background-color: #ffbf0000; border: none; color: #FBBC04; font-size: 24px; font-family: Roboto; font-weight: 700; line-height: 16px;"
+        <a href="index.html"></a>>
+    CreateME
+</button>
+
+<button class="plusik" id="openModal" style="width: 50px; left: 1615px; top: 276.5px; position: absolute;">
+    <img src="imgthree/plus.png" alt="Плюсик" />
+</button>
+
+
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <h2 style="padding-left: 47.5px; font-family: Roboto">Введите название дизайна</h2>
+        <div class="textpool">
+            <input type="text" id="elementText" style="width: 300px; height: 30px; font-size: 25px; font-family: Roboto" placeholder="Название" />
+        </div>
+        <div class="buttonplag">
+            <button style="width: 30px; height: 30px; font-size: 20px; position: relative; left: 15px; font-family: Roboto" id="addElementButton" class="buttonadd">Добавить</button>
+            <button style="width: 30px; height: 30px; font-size: 20px; position: relative; left: 180px; font-family: Roboto" id="closeModalButton" class="buttonclose">Закрыть</button>
+        </div>
+    </div>
+</div>
+
+
+<div class="content" id="content"></div>
+
+
+<script>
+    const openModalButton = document.getElementById("openModal");
+    const modal = document.getElementById("myModal");
+    const closeModalButton = document.getElementById("closeModalButton");
+    const addElementButton = document.getElementById("addElementButton");
+    const contentDiv = document.getElementById("brd1");
+    const elementTextInput = document.getElementById("elementText");
+
+    openModalButton.onclick = function () {
+        modal.style.display = "block";
+    }
+
+    closeModalButton.onclick = function () {
+        modal.style.display = "none";
+        elementTextInput.value = "";
+    }
+
+    addElementButton.onclick = function () {
+        const text = elementTextInput.value;
+        if (text.trim() !== "") {
+            const newParagraph = document.createElement("p");
+            newParagraph.textContent = text;
+            newParagraph.style.backgroundColor = "#FFBE00";
+            newParagraph.style.position = "absolute";
+            newParagraph.style.height = "230px";
+            newParagraph.style.fontFamily = "Roboto";
+            newParagraph.style.color = "white";
+            newParagraph.style.width = "682px";
+            newParagraph.style.fontSize = "40px";
+            newParagraph.style.top = "-40px";
+            newParagraph.style.padding = "10px"
+            contentDiv.appendChild(newParagraph);
+            modal.style.display = "none";
+            elementTextInput.value = "";
+        } else {
+            alert("Пожалуйста, введите текст элемента.");
+        }
+    }
+
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+            elementTextInput.value = ""; 
+        }
+    }
+</script>
+
