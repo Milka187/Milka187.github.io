@@ -1,0 +1,233 @@
+
+.roboto-bold {
+    font-family: "Roboto", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.roboto-light {
+    font-family: "Roboto", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+
+
+.button1:hover {
+    color: #FBBC04;
+    cursor: pointer;
+}
+
+.button1 {
+    color: white;
+}
+
+
+
+.btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 76.5px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 5px;
+    transition: all 1s ;
+    cursor: pointer;
+}
+
+.btn:hover:before {
+    width: 100%;
+}
+
+
+.button5:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 37px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 8px;
+    transition: all 0,5s ease;
+    cursor: pointer;
+}
+
+.button5:hover:before {
+    width: 100%;
+}
+
+.glmenu:hover {
+    color: #FBBC04;
+    cursor: pointer;
+}
+
+.glmenu {
+    color: white;
+}
+
+.nchr:hover {
+        color: #FBBC04;
+        cursor: pointer;
+    }
+
+.nchr {
+    color: white;
+}
+
+.text-input {
+    height: 65px; 
+    width: 100%; 
+    padding: 10px; 
+    border: 1px solid white; 
+    border-radius: 5px; 
+    font-size: 25px; 
+    background-color:#1e459f00;
+}
+
+.text-input {
+
+    color: white
+}
+
+
+.btn2:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0; 
+    height: 77px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 5px;
+    transition: all 0s ;
+    cursor: pointer;
+}
+
+.btn2:hover:before {
+    width: 100%;
+}
+
+.obvodka:hover {
+    color: #FBBC04;
+    cursor: pointer;
+
+}
+
+.obvodka {
+    color: white;
+}
+
+.vkl {
+    cursor: pointer;
+}
+
+.ttl {
+    cursor: pointer;
+}
+
+.tgl {
+    cursor: pointer;
+}
+
+input::placeholder {
+    color: #f8f7f77c;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+  .plusik {
+    cursor: pointer;
+  }
+
+  .crtme {
+    cursor: pointer;
+  }
+
+  .brd {
+    border:3px dashed #FFBE00;
+  }
+
+  .zgl {
+    cursor: pointer;
+  }
+
+  .plusik {
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.plusik img {
+    width: 100%;
+    height: auto;
+}
+
+.buttonadd {
+    background-color: #6a0dad; /* Фиолетовый */
+    color: #ffeb3b; /* Желтый */
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+    .button:hover {
+        opacity: 0.8;
+    }
+
+.buttonclose {
+    background-color: #6a0dad; /* Фиолетовый */
+    color: #ffeb3b; /* Желтый */
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.button:hover {
+    opacity: 0.8;
+}
+
+/* Модальное окно */
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed;
+    left: 8px;
+    top: 8px;
+    width: 1920px;
+    height: 1125px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #6a0dad; /* Фиолетовый */
+    margin-top: 450px;
+    margin-left: 810px;
+    border: 1px solid #888;
+    width: 400px;
+    height: 150px;
+    color: #ffeb3b; /* Желтый */
+    border-radius: 8px;
+}
+
+.textpool {
+    margin-left: 50px;
+}
+
+#content {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 600px;
+}
